@@ -23,8 +23,8 @@ def get_neighbour_rij_nw(nxyz, wcxyz, boxlength, nneighbour):
 
 # %%
 # %% 
-traj = np.loadtxt("../../IS47/xyz_hist.txt")
-w_traj = np.loadtxt("../../IS47/wxyz_hist.txt")
+traj = np.loadtxt("xyz_hist.txt")
+w_traj = np.loadtxt("wxyz_hist.txt")
 # %%
 noxygen = 1000
 natoms = 3000
@@ -78,6 +78,6 @@ polarization_mag = np.linalg.norm(polarization_mag, axis=-1)
 polarization_mag_spce = np.linalg.norm(polarization_mag_spce, axis=-1)
 polarization_mag_e0 = np.linalg.norm(polarization_mag_e0, axis=-1)
 
-fnew =open('polarization_SCFNN_47.txt', 'a')
+fnew =open('polarization_SCFNN.txt', 'a')
 np.savetxt(fnew, (polarization_mag,polarization_mag_spce,polarization_mag_e0))
 fnew.close()
